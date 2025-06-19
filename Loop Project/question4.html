@@ -1,0 +1,32 @@
+<!-- 4.Write javascript program to print 1 to n number print using for loop . -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 4</title>
+    <style>
+      h2 {
+        color: blue;
+        border: dotted 3px;
+        box-shadow: inset;
+        background-color: cornsilk;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="output"></h2>
+
+    <script>
+      let n = 100;
+      let output = "";
+
+      for (let i = 1; i <= n; i++) {
+        output += i + "   ,   ";
+      }
+      console.log(output);
+      document.getElementById("output").innerHTML = output;
+    </script>
+  </body>
+</html>

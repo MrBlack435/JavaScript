@@ -1,0 +1,30 @@
+<!-- 10.Write javascript program print out (10 11 9 12 8 13 7 14....) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 10</title>
+    <style>
+      h2 {
+        color: blue;
+        border: dotted 3px;
+        box-shadow: inset;
+        background-color: cornsilk;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="output"></h2>
+
+    <script>
+      let a = 10;
+      let b = 11;
+      let output = "";
+      for (let i = 0; i < 5; i++) {
+        output += a-- + " " + b++ + " ";
+      }
+      document.getElementById("output").innerHTML = output;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+<!-- 5.Write javascript program to print 1 to n number  and all number sum using do while loop . -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sum from 1 to N</title>
+    <style>
+      h2 {
+        color: darkgreen;
+        background-color: #f0f8ff;
+        padding: 10px;
+        border: 2px dashed orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="output"></h2>
+
+    <script>
+      let n = parseInt(prompt("Enter a number:"));
+      let i = 1;
+      let sum = 0;
+      let result = "";
+
+      do {
+        result += i + " ";
+        sum += i;
+        i++;
+      } while (i <= n);
+
+      result += "<br>Sum = " + sum;
+
+      document.getElementById("output").innerHTML = result;
+    </script>
+  </body>
+</html>

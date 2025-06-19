@@ -1,0 +1,32 @@
+<!--7 Write javascript program to calculate factorial of a number using while loop. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 7</title>
+    <style>
+      h2 {
+        color: blue;
+        border: dotted 3px;
+        box-shadow: inset;
+        background-color: cornsilk;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="output"></h2>
+
+    <script>
+      let num = Number(prompt("Enter the number:"));
+      let fact = 1;
+      while (num > 0) {
+        fact = fact * num;
+        num--;
+      }
+      console.log(fact);
+      document.getElementById("output").innerHTML = "Factorial:" + fact;
+    </script>
+  </body>
+</html>
