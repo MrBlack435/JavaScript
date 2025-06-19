@@ -1,0 +1,28 @@
+<!-- 6. Write a JavaScript program to perform a swapping of two variables.(all function use) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 6</title>
+  </head>
+  <body>
+    <h1>Question 6</h1>
+    <h2 id="output"></h2>
+    <h2 id="output1"></h2>
+    <script>
+      function swapVariables(x, y) {
+        document.getElementById("output").innerHTML =
+          "Before Swap: " + "x = " + x + ", y = " + y;
+        let temp = x;
+        x = y;
+        y = temp;
+        document.getElementById("output1").innerHTML =
+          " After Swap: " + "x =" + x + ", y = " + y;
+      }
+      let x = Number(prompt("Enter the nunber for x"));
+      let y = Number(prompt("Enter the number for y"));
+      swapVariables(x, y);
+    </script>
+  </body>
+</html>

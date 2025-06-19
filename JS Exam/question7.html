@@ -1,0 +1,29 @@
+<!-- 7. Write a JavaScript program to callback function and print to students details. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 7</title>
+  </head>
+  <body>
+    <h1>Question 7</h1>
+    <h2 id="output"></h2>
+    <script>
+      function getStudentDetails(name, age, grade, course, callback) {
+        callback(name, age, grade, course);
+      }
+      function printStudentDetails(name, age, grade, course) {
+        let output = ` Name: ${name},  Age: ${age},  Grade: ${grade},  Course:${course}`;
+        document.getElementById("output").innerHTML = output;
+      }
+      getStudentDetails(
+        "Jishan Patel",
+        22,
+        "A",
+        "Fullstack Development",
+        printStudentDetails
+      );
+    </script>
+  </body>
+</html>

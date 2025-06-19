@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Voting Eligibility Checker</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #f0f8ff;
+        text-align: center;
+        padding: 50px;
+      }
+
+      h2 {
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      button {
+        background-color: #28a745;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #218838;
+      }
+
+      #result {
+        margin-top: 25px;
+        font-size: 20px;
+        color: #004085;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Voting Eligibility Checker</h2>
+    <button onclick="checkEligibility()">Check Eligibility</button>
+    <p id="result"></p>
+
+    <script>
+      // Function with argument
+      const isEligibleToVote = (age) => {
+        if (age >= 18) {
+          return "✅ You are eligible to vote.";
+        } else {
+          return "❌ You are not eligible to vote.";
+        }
+      };
+
+      function checkEligibility() {
+        let userAge = Number(prompt("Enter your age:"));
+        if (isNaN(userAge) || userAge < 0) {
+          document.getElementById("result").innerHTML =
+            "⚠️ Please enter a valid age.";
+        } else {
+          let message = isEligibleToVote(userAge);
+          document.getElementById("result").innerHTML = message;
+        }
+      }
+    </script>
+  </body>
+</html>

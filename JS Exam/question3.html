@@ -1,0 +1,30 @@
+<!-- 3.findMax(a, b, c) that returns the largest of three numbers. (using simple function) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 3</title>
+  </head>
+  <body>
+    <h1>Question 3</h1>
+    <h2 id="output"></h2>
+    <script>
+      let a = Number(prompt("Enter the first number: "));
+      let b = Number(prompt("Enter the second number: "));
+      let c = Number(prompt("Enter the third number: "));
+      function findMax(a, b, c) {
+        if (a >= b && a >= c) {
+          return a;
+        } else if (b >= a && b >= c) {
+          return b;
+        } else {
+          return c;
+        }
+      }
+      document.getElementById("output").innerHTML =
+        "The Biggest Number is :" + findMax(a, b, c);
+    </script>
+  </body>
+</html>

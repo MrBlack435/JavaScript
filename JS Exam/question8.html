@@ -1,0 +1,87 @@
+<!-- 8.Write a JavaScript   program to input Banck Balnce system. -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Question 8</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f8ff;
+        padding: 20px;
+      }
+      button {
+        padding: 10px 15px;
+        margin: 5px;
+        cursor: pointer;
+      }
+      #output {
+        margin-top: 20px;
+        background: #e6f7ff;
+        padding: 15px;
+        border: 1px solid #007acc;
+        border-radius: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>🏦 Simple Bank System</h2>
+    <button onclick="bankSystem()">Start Banking</button>
+    <div id="output"></div>
+
+    <script>
+      let balance = 10000;
+
+      const checkBalance = () => `💰 Current Balance: ₹${balance}`;
+
+      const deposit = () => {
+        let amount = Number(prompt("Enter amount to deposit:"));
+        if (amount > 0) {
+          balance += amount;
+          return `✅ ₹${amount} deposited successfully. New Balance: ₹${balance}`;
+        } else {
+          return "❌ Invalid deposit amount.";
+        }
+      };
+
+      const withdraw = () => {
+        let amount = Number(prompt("Enter amount to withdraw:"));
+        if (amount > 0 && amount <= balance) {
+          balance -= amount;
+          return `✅ ₹${amount} withdrawn successfully. Remaining Balance: ₹${balance}`;
+        } else {
+          return "❌ Insufficient balance or invalid amount.";
+        }
+      };
+
+      const exit = () => "👋 Thank you for using our bank!";
+
+      const bankSystem = () => {
+        let choice = Number(
+          prompt(
+            "Choose an option:\n1. Check Balance\n2. Deposit\n3. Withdraw\n4. Exit"
+          )
+        );
+
+        let result;
+        switch (choice) {
+          case 1:
+            result = checkBalance();
+            break;
+          case 2:
+            result = deposit();
+            break;
+          case 3:
+            result = withdraw();
+            break;
+          case 4:
+            result = exit();
+            break;
+          default:
+            result = "❌ Invalid Option. Please try again.";
+        }
+
+        document.getElementById("output").innerHTML = result;
+      };
+    </script>
+  </body>
+</html>

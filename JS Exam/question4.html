@@ -1,0 +1,23 @@
+<!-- 4. Write a JavaScript program to use for recursion function (100 99 98......91) -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 4</title>
+  </head>
+  <body>
+    <h1>Question 4</h1>
+    <h2 id="output"></h2>
+    <script>
+      function recursion(num) {
+        if (num <= 90) {
+          return;
+        }
+        document.getElementById("output").innerHTML += num + ",";
+        recursion(num - 1);
+      }
+      recursion(100);
+    </script>
+  </body>
+</html>

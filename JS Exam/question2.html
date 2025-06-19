@@ -1,0 +1,26 @@
+<!-- 2. Write a JavaScript program to check a number's odd and even (using no return with parameter) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question 2</title>
+  </head>
+  <body>
+    <h1>Question 2</h1>
+    <script>
+      let num = Number(prompt("Enter the Number:"));
+      function checkOddEven(num) {
+        if (num % 2 === 0) {
+          document.write("This is a Even Number:");
+        } else if (num % 2 == 1) {
+          document.write("This is a Odd Number:");
+        } else {
+          document.write("Invalid Number");
+        }
+      }
+      checkOddEven(num);
+    </script>
+  </body>
+</html>
